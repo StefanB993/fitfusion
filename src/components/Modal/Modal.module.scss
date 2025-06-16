@@ -1,0 +1,14 @@
+.modal {
+  display: grid;
+  place-content: center;
+  grid-template-columns: minmax(min-content, 70rem);
+  position: fixed;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  inset: 0;
+  padding-inline: 2rem;
+
+  // &__content {
+  //   overflow: scroll;
+  // }
+}

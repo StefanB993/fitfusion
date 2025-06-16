@@ -1,0 +1,33 @@
+:root {
+  --clr-accent: #f9044c;
+  --clr-accent-dark: #c7033d;
+  --clr-main: #484f69;
+  --clr-main-light: #dadce1;
+  --clr-main-medium: #6d7287;
+  --clr-text-light: #757575;
+
+  --clr-grey-light: #eeeeee;
+  --clr-grey-medium: #bdbdbd;
+  --clr-grey: #a1acd0;
+
+  --fs-50: 0.85rem;
+  --fs-100: 1rem;
+  --fs-200: 1.25rem;
+  --fs-300: 1.5rem;
+
+  --box-shadow: 0px 0px 5px 5px rgba(72, 79, 105, 0.1);
+  --box-shadow-light: 0px 0px 10px 5px rgba(72, 79, 105, 0.05);
+  --border-radius: 1rem;
+
+  @media (width < 57rem) {
+    --fs-100: 0.9rem;
+    --fs-200: 1.1rem;
+    --fs-300: 1.3rem;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--fs-100);
+  color: var(--clr-main);
+}

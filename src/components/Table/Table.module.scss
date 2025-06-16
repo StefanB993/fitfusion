@@ -1,0 +1,106 @@
+@mixin badge($bg-color) {
+  span {
+    padding: 0.4rem 0.8rem;
+    color: #fff;
+    background-color: $bg-color;
+    border-radius: var(--border-radius);
+  }
+}
+
+.table {
+  max-width: 70rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  thead {
+    background-color: var(--clr-main);
+    color: #fff;
+  }
+
+  th,
+  td {
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: var(--fs-50);
+    text-align: left;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  td {
+    background-color: #fff;
+    text-transform: none;
+    font-size: var(--fs-100);
+    font-weight: 500;
+
+    &:global(.private) {
+      @include badge(var(--clr-accent));
+      font-weight: 600;
+    }
+
+    &:global(.public) {
+      @include badge(var(--clr-main));
+      font-weight: 600;
+    }
+
+    &:global(.exercises),
+    &:global(.actions) {
+      text-align: center;
+    }
+
+    &:global(.id) {
+      // @include badge(var(--clr-main-medium));
+      font-weight: 600;
+    }
+  }
+
+  tr {
+    border-bottom: 1px solid var(--clr-main-light);
+    position: relative;
+  }
+
+  &__actions {
+    position: absolute;
+    display: grid;
+    right: 0;
+    z-index: 10;
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.75rem 1.5rem;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: var(--clr-main-medium);
+        color: #fff;
+      }
+    }
+  }
+
+  &__btnToggle {
+    padding: 0.5rem;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: var(--clr-main-light);
+    }
+  }
+
+  &__toggleIcon {
+    font-size: var(--fs-200);
+  }
+
+  @media (width < 57rem) {
+    td {
+      padding: 0.5rem;
+    }
+
+    th {
+      padding: 0.5rem;
+    }
+  }
+}

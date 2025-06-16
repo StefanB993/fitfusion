@@ -1,0 +1,10 @@
+.main {
+  padding: 4rem;
+  @media (width < 57rem) {
+    padding: 4rem 2rem;
+  }
+
+  @media (width < 36rem) {
+    padding: 4rem 1rem;
+  }
+}

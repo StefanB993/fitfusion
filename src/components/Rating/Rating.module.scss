@@ -1,0 +1,11 @@
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.star {
+  color: var(--clr-accent);
+  cursor: pointer;
+  transition: color 0.2s;
+}

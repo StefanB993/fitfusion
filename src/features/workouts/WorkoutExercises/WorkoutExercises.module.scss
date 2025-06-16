@@ -1,0 +1,14 @@
+.workoutExercises {
+  display: grid;
+  gap: 2rem;
+
+  &__empty {
+    display: grid;
+    justify-items: start;
+    gap: 1rem;
+
+    p {
+      font-size: var(--fs-100);
+    }
+  }
+}

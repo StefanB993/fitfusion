@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+  border-bottom: var(--border);
+
+  &__user {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+    font-size: var(--fs-200);
+  }
+
+  &__userInfo {
+    display: grid;
+    gap: 0.25rem;
+  }
+  &__userAvatar {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__btn {
+    padding: 0.5rem;
+    color: #fff;
+
+    &:hover {
+      background-color: var(--clr-main-light);
+    }
+  }
+
+  &__menu {
+    display: flex;
+    background-color: var(--clr-main);
+
+    a {
+      display: grid;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #fff;
+      padding: 1rem;
+
+      &:hover {
+        background-color: var(--clr-main-medium);
+      }
+    }
+  }
+
+  @media (width < 57rem) {
+    border-bottom: none;
+  }
+}

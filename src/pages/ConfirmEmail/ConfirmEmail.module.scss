@@ -1,0 +1,39 @@
+.confirmEmail {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  gap: 2rem;
+
+  &__container {
+    display: grid;
+    gap: 2rem;
+  }
+
+  &__header {
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+
+    span {
+      color: var(--clr-accent);
+    }
+  }
+
+  &__message {
+    font-size: var(--fs-200);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--clr-main);
+  }
+
+  &__logo {
+    width: 15rem;
+    justify-self: center;
+  }
+
+  &__content {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+  }
+}

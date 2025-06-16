@@ -1,0 +1,56 @@
+body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 64rem) minmax(0, 1fr);
+  grid-template-rows: 100vh;
+
+  & > div {
+    grid-column: 2;
+  }
+}
+
+.layout {
+  height: 100%;
+  grid-column: 2;
+  --border: 1px solid #e0e0e0;
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  grid-template-rows: 6rem 1fr;
+  grid-template-areas:
+    "aside header"
+    "aside main";
+
+  border-left: var(--border);
+  border-right: var(--border);
+
+  & > header {
+    grid-area: header;
+    background-color: #fff;
+    background-color: var(--clr-main);
+  }
+
+  & > aside {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-area: aside;
+    background-color: #fff;
+
+    border-right: var(--border);
+  }
+
+  & > main {
+    grid-area: main;
+    background-color: var(--clr-grey-light);
+    overflow: scroll;
+  }
+
+  @media (width < 57rem) {
+    grid-template-rows: 6rem min-content 1fr;
+    grid-template-areas:
+      "header header"
+      "aside aside"
+      "main main";
+
+    border-left: none;
+    border-right: none;
+  }
+}

@@ -1,0 +1,38 @@
+.exercise {
+  box-shadow: var(--box-shadow);
+  //   padding: 1rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-main);
+    padding: 1rem;
+
+    img {
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+
+  &__body {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem 1rem 1rem 1rem;
+  }
+
+  &__equipment {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    background-color: var(--clr-accent);
+    color: #fff;
+    border-radius: 1rem;
+    font-weight: 600;
+  }
+
+  &__name {
+    text-align: center;
+    font-size: var(--fs-100);
+    font-weight: 500;
+  }
+}

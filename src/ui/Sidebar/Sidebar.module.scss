@@ -1,0 +1,53 @@
+.sidebar {
+  display: grid;
+  grid-template-rows: subgrid;
+  place-content: center;
+  padding-inline: 1rem;
+
+  &__header {
+    display: grid;
+    place-content: center;
+
+    img {
+      width: 9rem;
+    }
+  }
+
+  &__menu {
+    padding-top: 2rem;
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+  }
+
+  a {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:global(.active) {
+      background-color: var(--clr-main) !important;
+      color: #fff !important;
+    }
+
+    &:hover {
+      background-color: var(--clr-main-light);
+    }
+  }
+
+  @media (width < 57rem) {
+    align-items: center;
+    justify-content: center;
+    padding-inline: 0rem;
+    &__header {
+      display: none;
+      border-bottom: none;
+    }
+    &__menu {
+      padding-top: 0;
+      display: flex;
+      gap: 0;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.workouts {
+  display: grid;
+  gap: 3rem;
+
+  &__list {
+    background-color: #fff;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .workout {
+    padding: 1rem;
+    background-color: var(--clr-main);
+    color: #fff;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.noWorkouts {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+
+  p {
+    font-size: var(--fs-200);
+  }
+}

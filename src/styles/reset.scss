@@ -1,0 +1,78 @@
+/* Eric Meyer's Reset CSS, expanded */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Prevent links from inheriting default browser colors */
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; /* Remove default space between table cells */
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+textarea {
+  resize: vertical; /* Allow resizing vertically only */
+}
+
+img {
+  max-width: 100%; /* Prevent images from overflowing their container */
+  display: block; /* Remove any space below images */
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ccc; /* Custom border style for horizontal rule */
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+address {
+  font-style: normal;
+}
+
+mark {
+  background-color: yellow;
+}
+
+summary {
+  cursor: pointer;
+}

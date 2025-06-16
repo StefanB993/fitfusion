@@ -1,0 +1,35 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &__button {
+    background-color: var(--clr-main);
+    color: #fff;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: var(--fs-100);
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+
+    &.active {
+      background-color: var(--clr-accent);
+    }
+
+    &:hover {
+      background-color: var(--clr-accent-dark);
+    }
+  }
+
+  &--small {
+    gap: 0.5rem;
+
+    .pagination__button {
+      height: 1.5rem;
+      width: 1.5rem;
+      font-size: var(--fs-75);
+    }
+  }
+}

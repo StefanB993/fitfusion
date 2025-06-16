@@ -1,0 +1,10 @@
+.about {
+  display: grid;
+  gap: 2rem;
+
+  &__content {
+    display: grid;
+    gap: 1rem;
+    line-height: 1.5;
+  }
+}

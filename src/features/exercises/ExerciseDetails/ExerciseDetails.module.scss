@@ -1,0 +1,35 @@
+.exerciseDetails {
+  display: grid;
+  gap: 3rem;
+  justify-items: start;
+
+  &__content {
+    display: grid;
+    gap: 2rem;
+  }
+
+  ol {
+    list-style: decimal;
+    display: grid;
+    gap: 1rem;
+    padding-inline: 2rem;
+  }
+
+  &__sets {
+    display: grid;
+    gap: 2rem;
+  }
+}
+
+.sets {
+  display: grid;
+  gap: 1rem;
+
+  &__set {
+    display: flex;
+    gap: 2rem;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+  }
+}

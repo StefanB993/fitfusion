@@ -1,0 +1,50 @@
+.welcome {
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(min-content, 25rem);
+  place-content: center;
+  gap: 3rem;
+  background-color: var(--clr-grey-light);
+  text-align: center;
+  padding: 3rem;
+
+  &__header {
+    display: grid;
+    justify-content: center;
+  }
+
+  &__logo {
+    width: 15rem;
+    justify-self: center;
+  }
+
+  &__heading {
+    font-size: var(--fs-300);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--clr-main);
+
+    span {
+      color: var(--clr-accent);
+      margin-left: 0.25rem;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    a:global(.active) {
+      background-color: var(--clr-accent);
+    }
+
+    a {
+      padding: 0.5rem 1rem;
+      border-radius: var(--border-radius);
+      transition: background-color 0.2s;
+      background-color: var(--clr-main);
+      color: #fff;
+    }
+  }
+}

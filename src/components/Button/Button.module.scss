@@ -1,0 +1,39 @@
+.btn {
+  --clr: var(--clr-accent);
+  --clr-hover: var(--clr-accent-dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  transition: background-color 0.2s;
+  background-color: var(--clr);
+  color: #fff;
+  transition: all 0.2s;
+  font-weight: 600;
+  font-size: var(--fs-100);
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    background-color: var(--clr-hover);
+  }
+}
+
+.add {
+  --clr: var(--clr-main);
+  --clr-hover: var(--clr-main-medium);
+}
+
+.sm,
+.back {
+  padding: 0.5rem 1rem;
+}
+
+.round {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}

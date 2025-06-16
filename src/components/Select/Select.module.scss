@@ -1,0 +1,14 @@
+.select {
+  display: grid;
+  gap: 0.5rem;
+  p {
+    color: var(--clr-main-medium);
+    font-size: var(--fs-50);
+  }
+  select {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--clr-grey-medium);
+    color: var(--clr-main);
+    background-color: #fff;
+  }
+}
