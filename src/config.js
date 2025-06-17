@@ -53,3 +53,5 @@ export const EQUIPMENT_OPTIONS = [
 export const EXERCISES_PER_PAGE = 33;
 
 export const WORKOUTS_PER_PAGE = 4;
+
+export const IMG_URL = `https://fdrjcrrrxwntvbtcheks.supabase.co/storage/v1/object/public/muscles//`;

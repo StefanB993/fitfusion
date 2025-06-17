@@ -17,7 +17,6 @@ export async function signUpUser({ email, password, name }) {
           name,
           image: imagePath,
         },
-        emailRedirectTo: "http://localhost:5173/confirm-email",
       },
     });
 
@@ -124,7 +123,8 @@ async function deleteImage(id) {
 export async function recoverPassword({ email }) {
   try {
     let { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: "http://localhost:5173/dashboard/update-user",
+      redirectTo:
+        "https://stefanb993.github.io/fitfusion/dashboard/update-user",
     });
 
     if (error) {

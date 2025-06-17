@@ -46,6 +46,8 @@
   }
 
   @media (width < 57rem) {
+    grid-template-rows: min-content min-content 20rem min-content;
+
     &__gallery {
       grid-template-columns: repeat(1, 1fr);
     }

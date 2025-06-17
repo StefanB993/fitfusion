@@ -31,7 +31,7 @@ function ConfirmEmail() {
             Thank you for confirming your email!
           </p>
 
-          <Button onClick={handleLogin} type="submit">
+          <Button action={handleLogin} type="submit">
             Login
           </Button>
         </div>

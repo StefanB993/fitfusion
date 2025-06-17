@@ -4,6 +4,7 @@ import styles from "./WorkoutExercises.module.scss";
 import { FaEye, FaTrashAlt } from "react-icons/fa";
 import { useDeleteWorkoutExercise } from "../hooks/useDeleteWorkoutExercise";
 import { useNavigate } from "react-router-dom";
+import { IMG_URL } from "../../../config";
 
 function WorkoutExercises({ exercises, isOwner }) {
   const { deleteWorkoutExercise, isDeleting } = useDeleteWorkoutExercise();
@@ -13,7 +14,7 @@ function WorkoutExercises({ exercises, isOwner }) {
       bodyPart: {
         value: (bodyPart) => (
           <img
-            src={`/svg/${bodyPart}.svg`}
+            src={`${IMG_URL}${bodyPart}.svg`}
             alt={bodyPart}
             style={{ width: "3rem" }}
           ></img>

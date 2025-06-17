@@ -35,4 +35,14 @@
     font-size: var(--fs-100);
     font-weight: 500;
   }
+
+  @media (width < 57rem) {
+    &__header img {
+      width: 3rem;
+      height: 3rem;
+    }
+    &__body {
+      padding: 1rem 0.5rem 0.5rem 0.5rem;
+    }
+  }
 }
