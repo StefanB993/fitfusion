@@ -20,6 +20,12 @@ export async function signUpUser({ email, password, name }) {
       },
     });
 
+    await addUserDetails({
+      name,
+      id: user.id,
+      image: imagePath,
+    });
+
     if (errorSignUp) {
       throw new Error(errorSignUp.message);
     }
