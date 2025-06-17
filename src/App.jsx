@@ -25,99 +25,94 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 
 function App() {
-  const routes = createBrowserRouter(
-    [
-      {
-        element: <AuthProvider />,
-        children: [
-          {
-            path: "/",
-            loader: () => redirect("/welcome/login"),
-          },
-          {
-            path: "/welcome",
-            element: <Welcome />,
-            children: [
-              {
-                index: true,
-                loader: () => redirect("/welcome/login"),
-              },
-              {
-                path: "signup",
-                element: <SignUpForm />,
-              },
-              {
-                path: "login",
-                element: <LoginForm />,
-              },
-              {
-                path: "forgot-password",
-                element: <PasswordRecoveryForm />,
-              },
-            ],
-          },
-          {
-            element: <ProtectedRoute />,
-            children: [
-              {
-                path: "/test",
-                element: <Test />,
-              },
-
-              {
-                path: "/confirm-email",
-                element: <ConfirmEmail />,
-              },
-              {
-                path: "/password-reset",
-                element: <PasswordReset />,
-              },
-              {
-                path: "/dashboard",
-                element: <Layout />,
-                children: [
-                  {
-                    path: "home",
-                    element: <Home />,
-                  },
-                  {
-                    path: "update-user",
-                    element: <UpdateUser />,
-                  },
-                  {
-                    path: "workouts",
-                    element: <Workouts />,
-                  },
-
-                  {
-                    element: <WorkoutProvider />,
-                    children: [
-                      {
-                        path: "workouts/:id",
-                        element: <Workout />,
-                      },
-                      {
-                        path: "workouts/:id/:exerciseId",
-                        element: <ExerciseDetails />,
-                      },
-                    ],
-                  },
-
-                  {
-                    path: "workout-calendar",
-                    element: <About />,
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
+  const routes = createBrowserRouter([
     {
-      basename: "/fitfusion/",
-    }
-  );
+      element: <AuthProvider />,
+      children: [
+        {
+          path: "/",
+          loader: () => redirect("/welcome/login"),
+        },
+        {
+          path: "/welcome",
+          element: <Welcome />,
+          children: [
+            {
+              index: true,
+              loader: () => redirect("/welcome/login"),
+            },
+            {
+              path: "signup",
+              element: <SignUpForm />,
+            },
+            {
+              path: "login",
+              element: <LoginForm />,
+            },
+            {
+              path: "forgot-password",
+              element: <PasswordRecoveryForm />,
+            },
+          ],
+        },
+        {
+          element: <ProtectedRoute />,
+          children: [
+            {
+              path: "/test",
+              element: <Test />,
+            },
+
+            {
+              path: "/confirm-email",
+              element: <ConfirmEmail />,
+            },
+            {
+              path: "/password-reset",
+              element: <PasswordReset />,
+            },
+            {
+              path: "/dashboard",
+              element: <Layout />,
+              children: [
+                {
+                  path: "home",
+                  element: <Home />,
+                },
+                {
+                  path: "update-user",
+                  element: <UpdateUser />,
+                },
+                {
+                  path: "workouts",
+                  element: <Workouts />,
+                },
+
+                {
+                  element: <WorkoutProvider />,
+                  children: [
+                    {
+                      path: "workouts/:id",
+                      element: <Workout />,
+                    },
+                    {
+                      path: "workouts/:id/:exerciseId",
+                      element: <ExerciseDetails />,
+                    },
+                  ],
+                },
+
+                {
+                  path: "workout-calendar",
+                  element: <About />,
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ]);
 
   const queryClient = new QueryClient();
 
