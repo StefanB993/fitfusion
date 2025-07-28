@@ -79,6 +79,7 @@ export function LoginForm() {
 
   return (
     <AuthForm
+      defaultValues={{ email: "pomlumekko@gufum.com", password: "123456" }}
       onSubmit={signIn}
       inputs={inputs}
       submitText="Sign in"
