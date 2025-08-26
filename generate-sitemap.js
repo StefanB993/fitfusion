@@ -7,8 +7,8 @@ import { createGzip } from "zlib";
   const sitemap = new SitemapStream({
     hostname: "https://fitfusiondemo.netlify.app/",
   });
-  const writeStream = fs.createWriteStream("./public/sitemap.xml.gz");
-  sitemap.pipe(createGzip()).pipe(writeStream);
+  const writeStream = fs.createWriteStream("./public/sitemap.xml");
+  sitemap.pipe(writeStream);
 
   const routes = [
     "/",
