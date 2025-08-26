@@ -1,7 +1,5 @@
 import fs from "fs";
-import { url } from "inspector";
 import { SitemapStream, streamToPromise } from "sitemap";
-import { createGzip } from "zlib";
 
 (async () => {
   const sitemap = new SitemapStream({
